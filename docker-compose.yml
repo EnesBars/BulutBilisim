@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web:
+    build: 
+      context: /home/ubuntu/Acik-Kaynak-Yazilim-Gelistirme/4-Docker  # Dockerfile'ın bulunduğu dizin
+    command: python3 Anime.py -h 0.0.0.0
+    volumes:
+      - /home/ubuntu/Acik-Kaynak-Yazilim-Gelistirme/4-Docker:/usr/src/app
+    ports:
+      - 5001:5000
+
